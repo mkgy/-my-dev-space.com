@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MailController;
 use App\Http\Controllers\GroupController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
@@ -20,6 +21,8 @@ use Inertia\Inertia;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('send-mail', [MailController::class, 'index']);
 
 Route::get('/', [HomeController::class, 'index'])
     ->middleware(['auth', 'verified'])->name('dashboard');
