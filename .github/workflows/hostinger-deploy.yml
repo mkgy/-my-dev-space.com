@@ -32,6 +32,7 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           key: ${{ secrets.SSH_KEY }}
           script_stop: true
+          # steps we normally take when we have logged into the hostinger server in order to setup the enviroment for our app
           script: |
             cd domains
             cd my-dev-space.com
@@ -46,6 +47,5 @@ jobs:
           ssh-keyscan -t rsa -p ${{ secrets.SSH_PORT }} ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
       - name: Copy Build Files to Target Server
         run: |
-          rsync -r -e "ssh -p ${{ secrets.SSH_PORT }}" ${{ 
-github.workspace }}/public/build/ ${{ secrets.SSH_USERNAME }}@${{ 
-secrets.SSH_HOST }}:~/domains/my-dev-space/public/build
+          rsync -r -e "ssh -p ${{ secrets.SSH_PORT }}" ${{ github.workspace }}/public/build/ ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}:~/domains/my-dev-space/public/build
+
