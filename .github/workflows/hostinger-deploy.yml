@@ -10,10 +10,10 @@ jobs:
       - uses: shivammathur/setup-php@v2
         with:
           php-version: '8.2'
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: 16
       - name: Copy .env
         run: cp .env.example .env
       - name: Install composer Dependencies
@@ -32,7 +32,6 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           key: ${{ secrets.SSH_KEY }}
           script_stop: true
-          # steps we normally take when we have logged into the hostinger server in order to setup the enviroment for our app
           script: |
             cd domains
             cd my-dev-space.com
