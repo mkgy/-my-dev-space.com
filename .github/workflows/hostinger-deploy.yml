@@ -1,5 +1,5 @@
 name: HostingerDeploy
-
+# build and deploy: ci-cd
 on:
   push:
     branches: [main]
