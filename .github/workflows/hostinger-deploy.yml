@@ -48,3 +48,5 @@ jobs:
         run: |
           rsync -r -e "ssh -p ${{ secrets.SSH_PORT }}" ${{ github.workspace }}/public/build/ ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}:~/domains/my-dev-space/public/build
 
+      env: 
+            SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
