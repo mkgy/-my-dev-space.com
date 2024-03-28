@@ -47,4 +47,4 @@ jobs:
 
       - name: Copy Build Files to Target Server
         run: |
-          rsync -r -e "ssh -p ${{ secrets.SSH_PORT }}" ${{ github.workspace }}/public/build/ ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}:~/domains/my-dev-space.com/public/build
+          rsync -r -e "ssh -p ${{ secrets.SSH_PORT }}" ${{ github.workspace }}/public_html/build/ ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}:~/domains/my-dev-space.com/public_html/build
