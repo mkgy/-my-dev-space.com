@@ -10,17 +10,16 @@ jobs:
       - uses: shivammathur/setup-php@v2
         with:
           php-version: '8.2'
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: 16
+          node-version: 20
       - name: Copy .env
         run: cp .env.example .env
       - name: Install composer Dependencies
         run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
       - name: Install node dependencies
-        run: npm install --package-lock-only
-          npm ci
+        run: npm install --package-lock-only &&  npm ci
       - name: Setup Project
         run: |
           npm run build
