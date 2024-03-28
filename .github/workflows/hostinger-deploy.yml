@@ -32,8 +32,6 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           key: ${{ secrets.SSH_KEY }}
           script_stop: true
-          # steps we normally take when we have logged into the hostinger server in order to setup the enviroment for our app
-	  # something
           script: |
             cd domains
             cd my-dev-space.com
