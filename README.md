@@ -1,14 +1,19 @@
 # Laravel Social Media Website
-Laravel Social Media Website built with Inertia Vue.js. The project was created during the following 48 hours YouTube Playlist [YouTube Tutorial](https://www.youtube.com/watch?v=4iiEyOKhvao&list=PLLQuc_7jk__Wa8IoZ2s0J-ql_MIisndtZ).
+This project is credited to the following YouTube Tutorial:
+[YouTube Tutorial](https://www.youtube.com/watch?v=4iiEyOKhvao&list=PLLQuc_7jk__Wa8IoZ2s0J-ql_MIisndtZ).
+and was cloned by me with the sole purpose to educate myself about deploying a Laravel app built with Inertia Vue.js on Hostinger.
 
+## 
+*
+*
 ## Demo
-The application is deployed on the following domain [laravel-space.com](https://laravel-space.com/)
+The application is deployed on the following domain [laravel-space.com](https://my-dev-space.com/)
 
 ## Installation with docker
 
 #### 1. Clone the project
 ```bash
-git clone https://github.com/thecodeholic/laravel-social-media-website.git
+git clone https://github.com/mkgy/my-dev-space.com.git
 ```
 
 #### 2. Run `composer install`
